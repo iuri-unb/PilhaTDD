@@ -56,4 +56,20 @@
       free(pilha);
     }//End section 4 
 
+    SECTION("Testa a funcao Size"){
+      TipoPilha *pilha;
+      int teste;
+      pilha = criaPilha();
+      teste = Size(pilha);
+      REQUIRE( teste == 0 );
+      Push(pilha, 19);
+      teste = Size(pilha);
+      REQUIRE( teste == 1 );
+      Pop(pilha);
+      teste = Size(pilha);
+      REQUIRE( teste == 0);
+	DestroyStack(pilha);
+      free(pilha);
+    }//End section 5 
+
   }//end Test case
