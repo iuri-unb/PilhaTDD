@@ -68,8 +68,23 @@
       Pop(pilha);
       teste = Size(pilha);
       REQUIRE( teste == 0);
-	DestroyStack(pilha);
+	    DestroyStack(pilha);
       free(pilha);
     }//End section 5 
+
+    SECTION("Testa a funcao isFUll"){
+      TipoPilha *pilha;
+      pilha = criaPilha();
+      bool check; 
+      check = IsFull(pilha);
+      REQUIRE( check == false );
+      //Para encher a pilha
+      for(int i=0; i<100; i++)
+        Push(pilha, 1);
+      check = IsFull(pilha);
+      REQUIRE( check == true );
+	    DestroyStack(pilha);
+      free(pilha);
+    }//end Section 6 
 
   }//end Test case
