@@ -47,3 +47,14 @@ apontadorPilha* Pop(TipoPilha *monte) {
     monte->topo = monte->topo->proximo;
     return novo;
 } 
+
+apontadorPilha* Top(TipoPilha *monte) {
+/**
+ * @brief Retorna o elemento que esta no topo da pilha, mas sem remove-lo
+ *@return Retorna o elemento do topo da Pilha
+ * @param TipoPilha ponteiro(monte)
+ */
+    apontadorPilha *novo = (apontadorPilha *)malloc(sizeof(celulaPilha));
+    novo = monte->topo;
+    return novo;
+}
