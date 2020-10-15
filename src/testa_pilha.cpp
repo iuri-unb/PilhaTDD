@@ -41,4 +41,19 @@
       free(pilha);
     }//End section 3 
 
+    SECTION("Testa a funcao Top, com duas insercoes"){
+      TipoPilha *pilha;
+      pilha = criaPilha();
+      Push(pilha, 10);
+      apontadorPilha *teste = (apontadorPilha *) malloc(sizeof(celulaPilha));
+      teste = Top(pilha);
+      REQUIRE( teste->valor == 10 );
+      Push(pilha, 21);
+      teste = Top(pilha);
+      REQUIRE( teste->valor == 21 );
+      REQUIRE( pilha->tamanho == 2 );
+	    DestroyStack(pilha);
+      free(pilha);
+    }//End section 4 
+
   }//end Test case
