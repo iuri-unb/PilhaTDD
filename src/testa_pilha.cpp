@@ -11,4 +11,21 @@
 
       free(pilha);
     }//End section 1
+
+    SECTION("Testa a funcao Pop, com duas insercoes"){
+      TipoPilha *pilha;
+      pilha = criaPilha();
+      Push(pilha, 10);
+      Push(pilha, 21);
+      apontadorPilha *teste = (apontadorPilha *)malloc(sizeof(celulaPilha));
+      teste = Pop(pilha);
+      REQUIRE( pilha->tamanho == 1 );
+      teste = Pop(pilha);
+      REQUIRE( teste->valor == 10 );
+      teste = Pop(pilha);
+      REQUIRE( teste == NULL );
+      DestroyStack(pilha);
+      free(pilha);
+    }//End section 3 
+    
   }//end Test case
