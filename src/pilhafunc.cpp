@@ -58,3 +58,14 @@ apontadorPilha* Top(TipoPilha *monte) {
     novo = monte->topo;
     return novo;
 }
+
+int Size(TipoPilha *monte) {
+/**
+ * @brief Funcao que mostra o tamanho atual da pilha, por meio de uma das caracteristicas da pilha (tamanho)
+ *@return Retorna o tamanho da pilha como um inteiro 
+ * @param TipoPilha ponteiro(monte)
+ */
+    int tamanho;
+    tamanho = monte->tamanho;
+    return tamanho;
+}
