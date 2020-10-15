@@ -69,3 +69,15 @@ int Size(TipoPilha *monte) {
     tamanho = monte->tamanho;
     return tamanho;
 }
+
+bool IsFull(TipoPilha *monte) {
+/**
+ * @brief Indica se a pilha ja esta cheia. Recebe como entrada a Pilha
+ *@return Retorna true caso a pilha ja esteja cheia, false caso contrario 
+ */
+    if ( monte->tamanho == monte->tamanhomax )
+        return true;
+    else
+        return false;
+}
+
