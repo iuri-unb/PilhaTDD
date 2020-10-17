@@ -102,3 +102,18 @@ void SetSize(TipoPilha *monte, unsigned int tamanho1) {
     monte->tamanhomax = tamanho1;
     return;
 }
+
+void DestroyStack(TipoPilha *monte) {
+/**
+ * @brief Destroi os elementos da pilha, fazendo com que vire uma Pilha vazia. Recebe como entrada a Pilha 
+ */
+	apontadorPilha *temporario = monte->topo;
+	apontadorPilha *temporario2;
+
+	while ( temporario != NULL ) { //* Vai percorrer os elementos da pilha até ela ficar vazia */
+		temporario2 = temporario;
+		temporario = temporario->proximo;
+		free(temporario2);
+	} // Fim do While
+		monte->topo = NULL;
+}
