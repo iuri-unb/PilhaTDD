@@ -91,3 +91,14 @@ bool IsEmpty(TipoPilha *monte) {
     else
         return false;
 }
+
+void SetSize(TipoPilha *monte, unsigned int tamanho1) {
+/**
+ * @brief Muda o tamanho maximo da pilha, inicialmente setado em 100 elementos 
+ * Recebe como entrada a Pilha e o novo tamanho desejado
+ */
+    if ( monte->tamanho > tamanho1) //** Caso o novo tamanho seja menor que o tamanho atual, retorna sem mudar o tamanho */
+        return;
+    monte->tamanhomax = tamanho1;
+    return;
+}
