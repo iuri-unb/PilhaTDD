@@ -72,7 +72,7 @@
       free(pilha);
     }//End section 5 
 
-    SECTION("Testa a funcao isFUll"){
+    SECTION("Testa a funcao isFull"){
       TipoPilha *pilha;
       pilha = criaPilha();
       bool check; 
@@ -86,5 +86,21 @@
 	    DestroyStack(pilha);
       free(pilha);
     }//end Section 6 
+
+    SECTION("Testa a funcao isEmpty"){
+      TipoPilha *pilha;
+      pilha = criaPilha();
+      bool check;
+      check = IsEmpty(pilha);
+      REQUIRE( check == true );
+      Push(pilha, 10);
+      check = IsEmpty(pilha);
+      REQUIRE( check == false );
+      Pop(pilha);
+      check = IsEmpty(pilha);
+      REQUIRE( check == true );
+	    DestroyStack(pilha);
+      free(pilha);
+    }//end section 7
 
   }//end Test case
