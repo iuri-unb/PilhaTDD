@@ -111,4 +111,15 @@
       free(pilha);
   }//end section 8
 
+  SECTION( "Testa Destroy Stack" ){
+		TipoPilha *pilha;
+		pilha = criaPilha();
+		for( int i=0; i<30 ; i++ )
+			Push(pilha, 10);
+    REQUIRE( pilha->tamanho == 30 );
+    DestroyStack(pilha);
+    REQUIRE( pilha->topo == NULL );
+    free(pilha);
+	} //End Section 9 
+
   }//end Test case
