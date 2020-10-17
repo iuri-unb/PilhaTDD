@@ -81,3 +81,13 @@ bool IsFull(TipoPilha *monte) {
         return false;
 }
 
+bool IsEmpty(TipoPilha *monte) {
+/**
+ * @brief Indica se a Pilha esta vazia. Recebe como entrada a Pilha
+ *@return Retorna true caso a pilha esteja vazia 
+ */
+    if ( monte->topo == NULL )
+        return true;
+    else
+        return false;
+}
