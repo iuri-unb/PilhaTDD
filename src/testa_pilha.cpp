@@ -103,4 +103,12 @@
       free(pilha);
     }//end section 7
 
+    SECTION("Testa a funcao SetSize"){
+      TipoPilha *pilha;
+      pilha = criaPilha();
+      SetSize(pilha, 110);
+      REQUIRE( pilha->tamanhomax == 110);
+      free(pilha);
+  }//end section 8
+
   }//end Test case
